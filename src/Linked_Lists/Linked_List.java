@@ -1,5 +1,7 @@
 package Linked_Lists;
 
+import java.util.LinkedList;
+
 public class Linked_List {
     Node head;
 
@@ -25,6 +27,12 @@ public class Linked_List {
             last.next = new_node;
 
         }
+        return list;
+    }
+    public static Linked_List InsertAfter(Linked_List list,Node prev_node,int d){
+        Node new_node=new Node(d);
+        new_node.next=prev_node.next;
+        prev_node.next=new_node;    
         return list;
     }
     public static void printList(Linked_List list) {
